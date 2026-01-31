@@ -1,0 +1,110 @@
+/**
+ * Admin Styles
+ *
+ * @package Nasq
+ */
+
+/* Theme customizer preview */
+body.admin-bar {
+  padding-top: 32px;
+}
+
+/* Custom color picker */
+.wp-picker-container input[type="text"] {
+  width: 100px;
+}
+
+/* Theme options page */
+.nasq-theme-options {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.nasq-theme-options h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+.nasq-field {
+  margin-bottom: 20px;
+}
+
+.nasq-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.nasq-field input[type="text"],
+.nasq-field input[type="email"],
+.nasq-field input[type="url"],
+.nasq-field textarea,
+.nasq-field select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nasq-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons */
+.nasq-button-primary {
+  background: #1E7E34;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nasq-button-primary:hover {
+  background: #166429;
+}
+
+/* Help boxes */
+.nasq-help-box {
+  background: #f0f7fc;
+  border-left: 4px solid #2E9B45;
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.nasq-help-box h3 {
+  margin-top: 0;
+  color: #1E7E34;
+}
+
+/* Admin notice */
+.notice.nasq-notice {
+  border-left-color: #1E7E34;
+}
+
+.notice.nasq-notice.nasq-notice-success {
+  border-left-color: #28A745;
+}
+
+.notice.nasq-notice.nasq-notice-error {
+  border-left-color: #DC3545;
+}
+
+/* RTL Support */
+[dir="rtl"] .nasq-theme-options {
+  text-align: right;
+}
+
+[dir="rtl"] .nasq-help-box {
+  border-left: none;
+  border-right: 4px solid #2E9B45;
+  padding-right: 16px;
+  padding-left: 0;
+}

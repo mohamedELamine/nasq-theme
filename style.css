@@ -1,0 +1,301 @@
+/*
+Theme Name: Nasq
+Theme URI: https://nasq.com
+Author: Nasq Team
+Author URI: https://nasq.com
+Description: Professional WordPress theme for Arabic themes and plugins marketplace. Full RTL support, optimized for Arabic users, built with performance and accessibility in mind.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nasq
+Tags: accessibility-ready, translation-ready, rtl-language-support, e-commerce, marketplace
+*/
+
+/* CSS Variables */
+:root {
+  /* Primary Colors */
+  --nasq-primary: #1E7E34;
+  --nasq-primary-dark: #166429;
+  --nasq-primary-light: #2E9B45;
+
+  /* Accent Colors */
+  --nasq-secondary: #D4A017;
+  --nasq-accent: #0D47A1;
+  --nasq-accent-light: #1565C0;
+  --nasq-accent-dark: #0A3575;
+
+  /* Neutral Colors */
+  --nasq-dark: #121212;
+  --nasq-gray-dark: #343A40;
+  --nasq-gray: #6C757D;
+  --nasq-gray-light: #ADB5BD;
+  --nasq-light: #F8F9FA;
+  --nasq-white: #FFFFFF;
+
+  /* Functional Colors */
+  --nasq-success: #28A745;
+  --nasq-warning: #FFC107;
+  --nasq-error: #DC3545;
+  --nasq-info: #17A2B8;
+
+  /* Typography */
+  --nasq-font-ar: 'Tajawal', sans-serif;
+  --nasq-font-en: 'Inter', sans-serif;
+
+  /* Spacing */
+  --nasq-space-xs: 4px;
+  --nasq-space-sm: 8px;
+  --nasq-space-md: 16px;
+  --nasq-space-lg: 24px;
+  --nasq-space-xl: 32px;
+  --nasq-space-2xl: 48px;
+  --nasq-space-3xl: 64px;
+
+  /* Border Radius */
+  --nasq-radius-sm: 4px;
+  --nasq-radius-md: 6px;
+  --nasq-radius-lg: 8px;
+  --nasq-radius-xl: 16px;
+
+  /* Shadows */
+  --nasq-shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --nasq-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --nasq-shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --nasq-shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+
+  /* Direction Variables (for RTL support) */
+  --content-direction: ltr;
+  --text-align: left;
+  --float-start: left;
+  --float-end: right;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  --content-direction: rtl;
+  --text-align: right;
+  --float-start: right;
+  --float-end: left;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--nasq-font-ar), var(--nasq-font-en), sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--nasq-dark);
+  background-color: var(--nasq-light);
+  direction: var(--content-direction);
+  text-align: var(--text-align);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--nasq-space-md);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--nasq-space-md);
+}
+
+a {
+  color: var(--nasq-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--nasq-accent-light);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--nasq-space-md);
+}
+
+.section {
+  padding: var(--nasq-space-3xl) 0;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: var(--nasq-radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.button-primary {
+  background-color: var(--nasq-primary);
+  color: var(--nasq-white);
+}
+
+.button-primary:hover {
+  background-color: var(--nasq-primary-dark);
+  color: var(--nasq-white);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--nasq-primary);
+  border-color: var(--nasq-primary);
+}
+
+.button-secondary:hover {
+  background-color: var(--nasq-primary);
+  color: var(--nasq-white);
+}
+
+.button-accent {
+  background-color: var(--nasq-accent);
+  color: var(--nasq-white);
+}
+
+.button-accent:hover {
+  background-color: var(--nasq-accent-light);
+  color: var(--nasq-white);
+}
+
+/* Cards */
+.card {
+  background-color: var(--nasq-white);
+  border-radius: var(--nasq-radius-lg);
+  box-shadow: var(--nasq-shadow-md);
+  padding: var(--nasq-space-lg);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--nasq-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: var(--nasq-space-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3,
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--nasq-space-xs); }
+.mt-2 { margin-top: var(--nasq-space-sm); }
+.mt-3 { margin-top: var(--nasq-space-md); }
+.mt-4 { margin-top: var(--nasq-space-lg); }
+.mt-5 { margin-top: var(--nasq-space-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--nasq-space-xs); }
+.mb-2 { margin-bottom: var(--nasq-space-sm); }
+.mb-3 { margin-bottom: var(--nasq-space-md); }
+.mb-4 { margin-bottom: var(--nasq-space-lg); }
+.mb-5 { margin-bottom: var(--nasq-space-xl); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
