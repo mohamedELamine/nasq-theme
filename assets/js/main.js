@@ -99,11 +99,11 @@
 
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-4px)';
+                    this.classList.add('hover-active');
                 });
 
                 card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
+                    this.classList.remove('hover-active');
                 });
             });
         }

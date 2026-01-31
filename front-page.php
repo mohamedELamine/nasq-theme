@@ -28,7 +28,7 @@ get_header();
             </p>
 
             <div class="hero-actions">
-                <a href="<?php echo esc_url(edd_get_download_permalink(1)); ?>" class="button button-primary">
+                <a href="<?php echo esc_url(get_post_type_archive_link('download')); ?>" class="button button-primary">
                     <?php _e('Browse Themes', 'nasq'); ?>
                 </a>
                 <a href="<?php echo esc_url(home_url('/about')); ?>" class="button button-secondary">

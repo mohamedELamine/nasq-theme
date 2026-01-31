@@ -36,7 +36,7 @@ if (!defined('ABSPATH')) {
                     <span class="hamburger"></span>
                 </button>
 
-                <a href="<?php echo esc_url(edd_get_checkout_uri()); ?>" class="button button-accent">
+                <a href="<?php echo esc_url(function_exists('edd_get_checkout_uri') ? edd_get_checkout_uri() : home_url('/account')); ?>" class="button button-accent">
                     <?php _e('My Account', 'nasq'); ?>
                 </a>
             </div>

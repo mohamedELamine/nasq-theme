@@ -92,7 +92,7 @@ class Nasq_Enqueue {
         // Localize script
         wp_localize_script('nasq-main', 'nasqData', [
             'ajaxUrl'        => admin_url('admin-ajax.php'),
-            'nonce'          => wp_create_nonce('nasq_nonce'),
+            'nonce'          => wp_create_nonce('nasq_contact_action'),
             'isRTL'          => is_rtl(),
             'siteUrl'        => home_url(),
             'ajaxLoading'    => __('Loading...', 'nasq'),

@@ -15,6 +15,8 @@ if (!defined('ABSPATH')) {
 require_once get_template_directory() . '/inc/setup.php';
 require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/hooks.php';
+require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/ajax.php';
 require_once get_template_directory() . '/inc/template-tags.php';
 
 // Initialize theme

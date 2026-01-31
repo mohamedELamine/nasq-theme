@@ -409,3 +409,8 @@
   text-align: center;
   color: var(--nasq-gray);
 }
+
+/* Card Hover State */
+.theme-card.hover-active {
+  transform: translateY(-4px);
+}

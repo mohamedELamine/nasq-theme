@@ -15,7 +15,6 @@ class Nasq_Setup {
      */
     public static function init() {
         add_action('after_setup_theme', [__CLASS__, 'theme_setup']);
-        add_action('init', [__CLASS__, 'register_sidebars']);
         add_action('widgets_init', [__CLASS__, 'register_sidebars']);
     }
 

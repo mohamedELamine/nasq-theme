@@ -13,18 +13,19 @@ function nasq_logo() {
 
     if ($custom_logo_id) {
         $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-        if ($logo) {
+        if ($logo && isset($logo[0]) && !empty($logo[0])) {
             echo '<a href="' . esc_url(home_url('/')) . '" class="site-logo" rel="home">';
             echo '<img src="' . esc_url($logo[0]) . '" alt="' . esc_attr(get_bloginfo('name')) . '">';
             echo '</a>';
+            return;
         }
-    } else {
-        // Text logo fallback
-        echo '<a href="' . esc_url(home_url('/')) . '" class="site-logo-text" rel="home">';
-        echo '<span class="logo-ar">' . esc_html(__('نسق', 'nasq')) . '</span>';
-        echo '<span class="logo-en">NASQ</span>';
-        echo '</a>';
     }
+
+    // Text logo fallback
+    echo '<a href="' . esc_url(home_url('/')) . '" class="site-logo-text" rel="home">';
+    echo '<span class="logo-ar">' . esc_html(__('نسق', 'nasq')) . '</span>';
+    echo '<span class="logo-en">NASQ</span>';
+    echo '</a>';
 }
 
 /**
