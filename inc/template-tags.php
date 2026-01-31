@@ -6,7 +6,7 @@
  */
 
 /**
- * Display logo
+ * Display site logo
  */
 function nasq_logo() {
     $custom_logo_id = get_theme_mod('custom_logo');
@@ -33,6 +33,7 @@ function nasq_logo() {
  *
  * @param string $theme_location Theme location
  * @param string $container_class Container class
+ * @return void
  */
 function nasq_menu($theme_location = 'primary', $container_class = '') {
     wp_nav_menu([
@@ -46,6 +47,8 @@ function nasq_menu($theme_location = 'primary', $container_class = '') {
 
 /**
  * Display pagination
+ *
+ * @return void
  */
 function nasq_pagination() {
     the_posts_pagination([
@@ -58,6 +61,8 @@ function nasq_pagination() {
 
 /**
  * Display entry meta
+ *
+ * @return void
  */
 function nasq_entry_meta() {
     ?>
@@ -78,6 +83,7 @@ function nasq_entry_meta() {
  * Display read more button
  *
  * @param string $text Button text
+ * @return void
  */
 function nasq_read_more($text = '') {
     if (empty($text)) {
@@ -103,6 +109,7 @@ function nasq_has_featured_image() {
  * Display featured image
  *
  * @param string $size Image size
+ * @return void
  */
 function nasq_featured_image($size = 'large') {
     if (nasq_has_featured_image()) {

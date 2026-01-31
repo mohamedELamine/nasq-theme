@@ -16,6 +16,17 @@ class Nasq_Setup {
     public static function init() {
         add_action('after_setup_theme', [__CLASS__, 'theme_setup']);
         add_action('widgets_init', [__CLASS__, 'register_sidebars']);
+        add_action('admin_init', [__CLASS__, 'define_constants']);
+    }
+
+    /**
+     * Define theme constants
+     */
+    public static function define_constants() {
+        define('NASQ_VERSION', '1.0.0');
+        define('NASQ_MOBILE_BREAKPOINT', 768);
+        define('NASQ_TABLET_BREAKPOINT', 992);
+        define('NASQ_DESKTOP_BREAKPOINT', 1200);
     }
 
     /**

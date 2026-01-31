@@ -14,7 +14,6 @@
         init: function() {
             this.mobileMenu();
             this.smoothScroll();
-            this.lazyLoadImages();
             this.themeCardHover();
         },
 
@@ -47,12 +46,16 @@
                 }
             });
 
-            // Close menu on resize
+            // Close menu on resize with debouncing
+            let resizeTimer;
             window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    menu.classList.remove('active');
-                    toggle.classList.remove('active');
-                }
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    if (window.innerWidth > 768) {
+                        menu.classList.remove('active');
+                        toggle.classList.remove('active');
+                    }
+                }, 250);
             });
         },
 
@@ -77,18 +80,6 @@
                     }
                 });
             });
-        },
-
-        /**
-         * Lazy load images
-         */
-        lazyLoadImages: function() {
-            if ('loading' in HTMLImageElement.prototype) {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(img => {
-                    img.src = img.dataset.src;
-                });
-            }
         },
 
         /**

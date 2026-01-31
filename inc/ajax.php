@@ -9,11 +9,17 @@ if (!defined('ABSPATH')) exit;
 
 class Nasq_AJAX {
 
+    /**
+     * Initialize AJAX handlers
+     */
     public static function init() {
         add_action('wp_ajax_nasq_contact', [__CLASS__, 'contact_form']);
         add_action('wp_ajax_nopriv_nasq_contact', [__CLASS__, 'contact_form']);
     }
 
+    /**
+     * Handle contact form submission
+     */
     public static function contact_form() {
         // Verify nonce
         if (!isset($_POST['nasq_nonce']) || !wp_verify_nonce($_POST['nasq_nonce'], 'nasq_contact_action')) {
