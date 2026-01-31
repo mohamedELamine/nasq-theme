@@ -260,3 +260,35 @@ msgstr ""
 #: inc/template-tags.php:97
 msgid "View Details"
 msgstr ""
+
+#: inc/ajax.php:14
+msgid "Security check failed"
+msgstr ""
+
+#: inc/ajax.php:19
+msgid "Unauthorized"
+msgstr ""
+
+#: inc/ajax.php:27
+msgid "Please fill all fields"
+msgstr ""
+
+#: inc/ajax.php:32
+msgid "Invalid email address"
+msgstr ""
+
+#: inc/ajax.php:47
+msgid "Message sent successfully"
+msgstr ""
+
+#: inc/ajax.php:49
+msgid "Failed to send message"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Featured Download ID"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "Enter to download post ID to feature on homepage"
+msgstr ""
